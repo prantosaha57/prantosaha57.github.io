@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recommendations — Pranto Saha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOR Modals -->
+  <div class="modal-overlay" id="lor-zahid">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">Letter of Recommendation — Dr. Md. Zahid Hasan</div>
+        <button class="modal-close" onclick="closeModal('lor-zahid')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-label" style="margin-bottom:14px;">Associate Professor &amp; Lab Director, Dept. of CSE · Daffodil International University</div>
+        <p>To Whom It May Concern,</p>
+        <p>It is my great pleasure to recommend <strong>Pranto Saha</strong>, whom I have had the privilege of supervising as both his undergraduate thesis supervisor and research mentor at the <strong>Health Informatics Research Lab (HIRL)</strong> since July 2022.</p>
+        <p>Pranto has consistently demonstrated exceptional research aptitude and intellectual curiosity. His work on self-supervised learning for chest X-ray classification has produced a framework achieving <strong>95.99% accuracy</strong> — results that are publication-worthy and have been submitted to a leading Springer journal.</p>
+        <p>Beyond technical competence, Pranto shows remarkable independence, initiative, and collaborative spirit. He has made significant contributions to multiple research projects within our lab and has mentored junior researchers with patience and clarity.</p>
+        <p>I strongly recommend Pranto Saha for PhD admission without reservation. He has the intellectual foundation, work ethic, and research drive to thrive in a doctoral program.</p>
+        <p style="margin-top:18px;"><strong>Dr. Md. Zahid Hasan</strong><br>Associate Professor &amp; Lab Director, Dept. of CSE<br>Daffodil International University<br><a href="mailto:zahid.cse@diu.edu.bd" style="color:var(--accent);">zahid.cse@diu.edu.bd</a></p>
+        <div style="margin-top:16px;padding:12px 14px;background:#fdf5e6;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:0.78rem;color:#a0730a;">
+          📄 This is a sample representation. Replace with the actual scanned LOR PDF link or text when available.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="lor-bimal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">Letter of Recommendation — Prof. Dr. Bimal Chandra Das</div>
+        <button class="modal-close" onclick="closeModal('lor-bimal')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-label" style="margin-bottom:14px;">Associate Dean, FSIT · Dept. of ITM · Daffodil International University</div>
+        <p>To Whom It May Concern,</p>
+        <p>I write with great enthusiasm to recommend <strong>Pranto Saha</strong> for PhD candidacy. I have had the opportunity to observe Pranto's academic development over the course of his undergraduate studies at <a href="https://daffodilvarsity.edu.bd/" target="_blank" style="color:var(--accent);">Daffodil International University</a>.</p>
+        <p>Pranto is among the most diligent and academically gifted students I have encountered in my years in the faculty. His CGPA of <strong>3.94/4.00</strong> and multiple merit scholarships, including three instances of a perfect 4.00, speak to his consistent excellence.</p>
+        <p>What distinguishes Pranto is not merely academic performance but his ability to synthesize knowledge across domains — from deep learning to academic leadership. He has represented our institution admirably in national and international forums.</p>
+        <p>I give my highest recommendation to Pranto Saha for doctoral study. I am confident he will excel and contribute meaningfully to his chosen research area.</p>
+        <p style="margin-top:18px;"><strong>Prof. Dr. Bimal Chandra Das</strong><br>Associate Dean, FSIT · Dept. of ITM<br>Daffodil International University<br><a href="mailto:bcdas@daffodilvarsity.edu.bd" style="color:var(--accent);">bcdas@daffodilvarsity.edu.bd</a></p>
+        <div style="margin-top:16px;padding:12px 14px;background:#fdf5e6;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:0.78rem;color:#a0730a;">
+          📄 This is a sample representation. Replace with the actual scanned LOR PDF link or text when available.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Public Notes Modal (view all) -->
+  <div class="modal-overlay" id="modal-notes">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">All Public Recommendations</div>
+        <button class="modal-close" onclick="closeModal('modal-notes')">✕</button>
+      </div>
+      <div class="modal-body" id="all-notes-body">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-profile">
+      <div class="sidebar-avatar"><img src="Profile_Photo.jpg" alt="Pranto Saha"></div>
+      <div>
+        <div class="sidebar-name">Pranto Saha</div>
+        <div class="sidebar-title">Lecturer · MSc Researcher</div>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="index.html" class="active"><span class="nav-icon"></span> Home</a>
+      <a href="research.html"><span class="nav-icon"></span> Research</a>
+      <a href="teaching.html"><span class="nav-icon"></span> Teaching</a>
+      <a href="achievements.html"><span class="nav-icon"></span> Achievements</a>
+      <a href="blog.html"><span class="nav-icon"></span> Blog</a>
+      <a href="recommendations.html"><span class="nav-icon"></span> Recommendations</a>
+      <a href="cv.html"><span class="nav-icon"></span> CV</a>
+      <a href="contact.html"><span class="nav-icon"></span> Contact</a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-social">
+        <a href="mailto:saha15-4157@diu.edu.bd">Email</a>
+        <a href="https://github.com/prantosaha" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/prantosaha" target="_blank">LinkedIn</a>
+      </div>
+      <p>© 2025 Pranto Saha</p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="page-hero">
+      <div class="page-hero-label">Recommendations</div>
+      <h1>Recommendations</h1>
+      <p>Words from colleagues, students, and professors — and Letters of Recommendation from my supervisors.</p>
+    </div>
+
+    <div class="content">
+
+      <!-- LORs -->
+      <div style="margin-bottom:16px;">
+        <div class="section-title">Letters of Recommendation</div>
+        <div class="section-subtitle">Click to view each letter</div>
+      </div>
+
+      <div class="lor-card">
+        <div class="lor-info">
+          <div class="lor-icon">📜</div>
+          <div>
+            <div class="lor-name">Dr. Md. Zahid Hasan</div>
+            <div class="lor-role">Associate Professor &amp; Lab Director, Dept. of CSE · <a href="https://daffodilvarsity.edu.bd/" target="_blank" style="color:var(--accent);">Daffodil International University</a></div>
+          </div>
+        </div>
+        <button class="lor-btn" onclick="openModal('lor-zahid')">📖 View LOR</button>
+      </div>
+
+      <div class="lor-card">
+        <div class="lor-info">
+          <div class="lor-icon">📜</div>
+          <div>
+            <div class="lor-name">Prof. Dr. Bimal Chandra Das</div>
+            <div class="lor-role">Associate Dean, FSIT · Dept. of ITM · <a href="https://daffodilvarsity.edu.bd/" target="_blank" style="color:var(--accent);">Daffodil International University</a></div>
+          </div>
+        </div>
+        <button class="lor-btn" onclick="openModal('lor-bimal')">📖 View LOR</button>
+      </div>
+
+      <!-- Testimonials from Colleagues / Students / Professors -->
+      <div style="margin-top:40px;margin-bottom:16px;">
+        <div class="section-title">Testimonials</div>
+        <div class="section-subtitle">From colleagues, students &amp; professors</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"</div>
+        <div class="testimonial-text">Pranto is one of the most dedicated student-researchers I've worked with. His ability to grasp complex deep learning concepts and translate them into publishable research within a short time is truly impressive.</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">ZH</div>
+          <div>
+            <div class="testimonial-name">Dr. Md. Zahid Hasan</div>
+            <div class="testimonial-role">Associate Professor &amp; Lab Director, DIU · Thesis Supervisor</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"</div>
+        <div class="testimonial-text">I had Pranto as a teaching assistant in our lab, and the difference he made for students was remarkable. He explains algorithms with a clarity and patience that is rare — students genuinely looked forward to his sessions.</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">FJ</div>
+          <div>
+            <div class="testimonial-name">Asst. Prof. Fatema Tuj Johora</div>
+            <div class="testimonial-role">Department of CSE, Daffodil International University</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"</div>
+        <div class="testimonial-text">As a student in Pranto's Python class at Q-Bit Learning, I went from complete beginner to building my own ML projects in three months. His Bengali explanations made the hardest concepts feel simple.</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">S</div>
+          <div>
+            <div class="testimonial-name">Student — Q-Bit Learning</div>
+            <div class="testimonial-role">Python &amp; Machine Learning Class, 2024</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"</div>
+        <div class="testimonial-text">Working with Pranto on our agriculture paper was a great experience. He brings both strong technical skills and a collaborative attitude to research — always ready to discuss, iterate, and improve the work.</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">IA</div>
+          <div>
+            <div class="testimonial-name">Irfan Ahmed Alvi</div>
+            <div class="testimonial-role">Research Collaborator, HIRL · Co-author on 3 papers</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Public Note Form -->
+      <div style="margin-top:44px;margin-bottom:16px;">
+        <div class="section-title">Leave a Recommendation</div>
+        <div class="section-subtitle">Colleagues, students, or anyone — leave a note about working with Pranto</div>
+      </div>
+
+      <div class="public-note-form">
+        <div class="form-grid">
+          <div class="form-row">
+            <label class="form-label">Your Name *</label>
+            <input type="text" class="form-input" id="note-name" placeholder="e.g. Dr. John Smith">
+          </div>
+          <div class="form-row">
+            <label class="form-label">Your Role / Institution</label>
+            <input type="text" class="form-input" id="note-role" placeholder="e.g. Professor at XYZ University">
+          </div>
+        </div>
+        <div class="form-row">
+          <label class="form-label">Relationship to Pranto *</label>
+          <select class="form-select" id="note-relation">
+            <option value="">Select your relationship...</option>
+            <option value="Professor / Supervisor">Professor / Supervisor</option>
+            <option value="Research Collaborator">Research Collaborator</option>
+            <option value="Student / Mentee">Student / Mentee</option>
+            <option value="Colleague">Colleague</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label class="form-label">Your Recommendation *</label>
+          <textarea class="form-textarea" id="note-text" placeholder="Share your experience working with Pranto..."></textarea>
+        </div>
+        <button class="btn-primary" onclick="submitNote()">✉️ Submit Recommendation</button>
+        <div class="form-success" id="note-success">
+          ✅ Thank you! Your recommendation has been submitted via email. Pranto will review and add it to this page.
+        </div>
+      </div>
+
+      <!-- Public Notes Display -->
+      <div style="margin-top:32px;margin-bottom:16px;">
+        <div class="section-title">Community Notes</div>
+        <div class="section-subtitle">Public recommendations submitted through this page</div>
+      </div>
+      <div id="public-notes-list">
+        <!-- Populated by JS from localStorage -->
+        <div style="padding:24px;text-align:center;color:var(--text-muted);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:var(--card-bg);border:1px solid var(--border);border-radius:10px;" id="no-notes-msg">
+          No community notes yet. Be the first to leave a recommendation above!
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    // Modal controls
+    function openModal(id) {
+      document.getElementById(id).classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', function(e) {
+        if (e.target === this) closeModal(this.id);
+      });
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.open').forEach(m => closeModal(m.id));
+    });
+
+    // Public Notes (localStorage — persists in same browser)
+    function loadNotes() {
+      let notes = [];
+      try { notes = JSON.parse(localStorage.getItem('ps_notes') || '[]'); } catch(e) {}
+      const list = document.getElementById('public-notes-list');
+      const noMsg = document.getElementById('no-notes-msg');
+      if (notes.length === 0) {
+        noMsg.style.display = 'block';
+        return;
+      }
+      noMsg.style.display = 'none';
+      notes.forEach(n => {
+        const card = document.createElement('div');
+        card.className = 'testimonial-card';
+        card.innerHTML = `
+          <div class="testimonial-quote">"</div>
+          <div class="testimonial-text">${escHtml(n.text)}</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:var(--blue);">${escHtml(n.name.charAt(0).toUpperCase())}</div>
+            <div>
+              <div class="testimonial-name">${escHtml(n.name)}</div>
+              <div class="testimonial-role">${escHtml(n.role || '')} ${n.relation ? '· ' + escHtml(n.relation) : ''}</div>
+            </div>
+          </div>
+        `;
+        list.appendChild(card);
+      });
+    }
+
+    function escHtml(str) {
+      return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function submitNote() {
+      const name = document.getElementById('note-name').value.trim();
+      const role = document.getElementById('note-role').value.trim();
+      const relation = document.getElementById('note-relation').value;
+      const text = document.getElementById('note-text').value.trim();
+      if (!name || !text || !relation) {
+        alert('Please fill in your name, relationship, and recommendation.');
+        return;
+      }
+      let notes = [];
+      try { notes = JSON.parse(localStorage.getItem('ps_notes') || '[]'); } catch(e) {}
+      notes.unshift({ name, role, relation, text, date: new Date().toLocaleDateString() });
+      localStorage.setItem('ps_notes', JSON.stringify(notes));
+
+      // Also open mailto
+      const subject = encodeURIComponent('Website Recommendation from ' + name);
+      const body = encodeURIComponent(`Name: ${name}\nRole: ${role}\nRelationship: ${relation}\n\nRecommendation:\n${text}`);
+      window.open(`mailto:saha15-4157@diu.edu.bd?subject=${subject}&body=${body}`);
+
+      document.getElementById('note-success').style.display = 'block';
+      document.getElementById('note-name').value = '';
+      document.getElementById('note-role').value = '';
+      document.getElementById('note-relation').value = '';
+      document.getElementById('note-text').value = '';
+
+      // Reload notes display
+      const list = document.getElementById('public-notes-list');
+      list.innerHTML = '<div id="no-notes-msg" style="display:none;"></div>';
+      loadNotes();
+    }
+
+    loadNotes();
+  </script>
+</body>
+</html>

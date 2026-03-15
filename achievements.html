@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievements — Pranto Saha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Certificate Viewer Modal -->
+  <div class="modal-overlay" id="cert-modal">
+    <div class="modal-box" style="max-width:720px;">
+      <div class="modal-header">
+        <div class="modal-title" id="cert-modal-title">Certificate</div>
+        <button class="modal-close" onclick="closeModal('cert-modal')">✕</button>
+      </div>
+      <div class="modal-body" style="text-align:center;">
+        <div id="cert-modal-body" style="font-family:'DM Sans',sans-serif;font-size:0.88rem;color:var(--text-muted);">
+          <!-- Cert content loads here -->
+        </div>
+        <div style="margin-top:16px;padding:12px 14px;background:#fdf5e6;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:0.78rem;color:#a0730a;text-align:left;">
+          📄 To display the actual certificate image, replace the placeholder with: <code style="background:rgba(0,0,0,0.06);padding:2px 5px;border-radius:3px;">&lt;img src="certs/filename.jpg" style="max-width:100%;border-radius:8px;"&gt;</code> inside the cert card's <code>data-img</code> attribute.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-profile"><div class="sidebar-avatar"><img src="Profile_Photo.jpg" alt="Pranto Saha"></div><div><div class="sidebar-name">Pranto Saha</div><div class="sidebar-title">Lecturer ·Researcher</div></div></div>
+    <nav class="sidebar-nav">
+      <a href="index.html" class="active"><span class="nav-icon"></span> Home</a>
+      <a href="research.html"><span class="nav-icon"></span> Research</a>
+      <a href="teaching.html"><span class="nav-icon"></span> Teaching</a>
+      <a href="achievements.html"><span class="nav-icon"></span> Achievements</a>
+      <a href="blog.html"><span class="nav-icon"></span> Blog</a>
+      <a href="recommendations.html"><span class="nav-icon"></span> Recommendations</a>
+      <a href="cv.html"><span class="nav-icon"></span> CV</a>
+      <a href="contact.html"><span class="nav-icon"></span> Contact</a>
+    </nav>
+    <div class="sidebar-footer"><div class="sidebar-social"><a href="mailto:saha15-4157@diu.edu.bd">Email</a><a href="https://github.com/prantosaha" target="_blank">GitHub</a><a href="https://linkedin.com/in/prantosaha" target="_blank">LinkedIn</a></div><p>© 2025 Pranto Saha</p></div>
+  </aside>
+
+  <main class="main">
+    <div class="page-hero">
+      <div class="page-hero-label">Achievements & News</div>
+      <h1>Achievements</h1>
+      <p>Awards, honors, certifications, conference participation, and recent news.</p>
+    </div>
+    <div class="content">
+
+      <!-- Awards -->
+      <div style="margin-bottom:16px;"><div class="section-title">Awards &amp; Honors</div><div class="section-subtitle">Academic excellence and recognition</div></div>
+
+      <div class="award-item">
+        <div class="award-icon">🥉</div>
+        <div><div class="award-title">2nd Runner-Up — Undergraduate Segment, DIU-DoR Poster Presentation</div><div class="award-detail"><a href="https://daffodilvarsity.edu.bd/" target="_blank" style="color:var(--accent);">Daffodil International University</a> · 2025</div></div>
+      </div>
+      <div class="award-item">
+        <div class="award-icon">🎓</div>
+        <div><div class="award-title">50% Merit Scholarship — Three Times (Perfect CGPA 4.00)</div><div class="award-detail"><a href="https://daffodilvarsity.edu.bd/" target="_blank" style="color:var(--accent);">Daffodil International University</a> · 2021–2025</div></div>
+      </div>
+      <div class="award-item">
+        <div class="award-icon">📚</div>
+        <div><div class="award-title">30% Merit Scholarship — Four Times (CGPA above 3.90)</div><div class="award-detail"><a href="https://daffodilvarsity.edu.bd/" target="_blank" style="color:var(--accent);">Daffodil International University</a> · 2021–2025</div></div>
+      </div>
+      <div class="award-item">
+        <div class="award-icon">🏅</div>
+        <div><div class="award-title">5th Position — <a href="https://www.kaggle.com" target="_blank" style="color:var(--accent);">Datathon Contest 2024</a></div><div class="award-detail">Organized by <a href="https://www.facebook.com/diucpc" target="_blank" style="color:var(--accent);">DIU-CPC</a> · 2024</div></div>
+      </div>
+      <div class="award-item">
+        <div class="award-icon">🖥️</div>
+        <div><div class="award-title">Divisional Round Qualifier — ICT Olympiad Bangladesh 2024</div><div class="award-detail">Advanced to the divisional round of the national ICT Olympiad · 2024</div></div>
+      </div>
+      <div class="award-item">
+        <div class="award-icon">🏆</div>
+        <div><div class="award-title">Government Scholarship — Junior School Certificate (JSC)</div><div class="award-detail">2nd place in the district, General Grade · 2015</div></div>
+      </div>
+      <div class="award-item">
+        <div class="award-icon">⭐</div>
+        <div><div class="award-title">Government Scholarship — High School Entrance</div><div class="award-detail">Merit-based scholarship · 2012</div></div>
+      </div>
+
+      <!-- Certificates -->
+      <div style="margin-top:44px;margin-bottom:16px;"><div class="section-title">Certificates &amp; Credentials</div><div class="section-subtitle">Click any certificate to view details</div></div>
+      <div class="cert-grid">
+
+        <div class="cert-card" onclick="viewCert('Deep Learning with Computer Vision','Innovative Skills','2024','🎓','Completed a comprehensive course on computer vision techniques, CNNs, object detection, and image segmentation using Python, TensorFlow, and OpenCV.')">
+          <div class="cert-thumb">🎓</div>
+          <div class="cert-info">
+            <div class="cert-title">Deep Learning with Computer Vision</div>
+            <div class="cert-issuer">Innovative Skills</div>
+            <div class="cert-year">2024</div>
+          </div>
+        </div>
+
+        <div class="cert-card" onclick="viewCert('Machine Learning — Advanced Learning Algorithms','Coursera · Stanford University (Andrew Ng)','2024','🤖','Part of the Machine Learning Specialization by Andrew Ng at Stanford University. Covered advanced supervised learning, decision trees, ensemble methods, neural networks, and best practices for ML systems.')">
+          <div class="cert-thumb">🤖</div>
+          <div class="cert-info">
+            <div class="cert-title">Machine Learning — Advanced Learning Algorithms</div>
+            <div class="cert-issuer">Coursera · Stanford University</div>
+            <div class="cert-year">2024</div>
+          </div>
+        </div>
+
+        <div class="cert-card" onclick="viewCert('Vice President — DIU Computer &amp; Programming Club','Daffodil International University','2024–Present','🏛️','Appointed Vice President of the Research &amp; Journal Wing of DIU-CPC. Led research activities, organized contests (Datathon, Prompt Battle), courses, and workshops.')">
+          <div class="cert-thumb" style="background:linear-gradient(135deg,#c9973a,#e6b84a);">🏛️</div>
+          <div class="cert-info">
+            <div class="cert-title">Vice President — DIU CPC (R&amp;J Wing)</div>
+            <div class="cert-issuer">Daffodil International University</div>
+            <div class="cert-year">2024–Present</div>
+          </div>
+        </div>
+
+        <div class="cert-card" onclick="viewCert('2nd Runner-Up — DIU-DoR Poster Presentation','Daffodil International University','2025','🥉','Awarded 2nd Runner-Up in the Undergraduate Segment of the DIU Department of Research (DoR) Poster Presentation competition for research on deep learning for chest X-ray analysis.')">
+          <div class="cert-thumb" style="background:linear-gradient(135deg,#b87333,#d4956a);">🥉</div>
+          <div class="cert-info">
+            <div class="cert-title">2nd Runner-Up — DoR Poster Presentation</div>
+            <div class="cert-issuer">Daffodil International University</div>
+            <div class="cert-year">2025</div>
+          </div>
+        </div>
+
+        <div class="cert-card" onclick="viewCert('Session Moderator — IDAA 2025','International Conference on Intelligent Data Analysis and Applications','2025','🎙️','Served as Session Moderator at IDAA 2025, facilitating academic sessions on AI and intelligent data analysis.')">
+          <div class="cert-thumb" style="background:linear-gradient(135deg,#1e4080,#2e6db4);">🎙️</div>
+          <div class="cert-info">
+            <div class="cert-title">Session Moderator — IDAA 2025</div>
+            <div class="cert-issuer">International Conference (IDAA 2025)</div>
+            <div class="cert-year">2025</div>
+          </div>
+        </div>
+
+        <div class="cert-card" onclick="viewCert('ICPC Dhaka Regional 2024 — Closing Lead Volunteer','International Collegiate Programming Contest','2024','💻','Served as Closing Lead Volunteer for ICPC Dhaka Regional 2024 at Daffodil International University, overseeing the closing ceremony and coordinating with organizers.')">
+          <div class="cert-thumb" style="background:linear-gradient(135deg,#1a5c2a,#2e8a40);">💻</div>
+          <div class="cert-info">
+            <div class="cert-title">ICPC Dhaka Regional — Closing Lead Volunteer</div>
+            <div class="cert-issuer">ICPC · DIU</div>
+            <div class="cert-year">2024</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="padding:18px 22px;background:#f0f4ff;border:1px dashed #c2d8f0;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:0.82rem;color:var(--text-muted);margin-bottom:32px;">
+        📂 <strong>To add real certificate images:</strong> Create a <code>certs/</code> folder in your site directory, place your certificate images there, and update the <code>cert-thumb</code> div to: <code>&lt;img src="certs/your-cert.jpg" style="width:100%;height:100%;object-fit:cover;"&gt;</code>
+      </div>
+
+      <!-- Conferences -->
+      <div style="margin-bottom:16px;"><div class="section-title">Conferences &amp; Events</div></div>
+      <div class="card">
+        <div class="card-header"><div class="card-title">Session Moderator — <a href="#" style="color:var(--accent);">IDAA 2025</a></div><div class="card-meta">2025</div></div>
+        <div class="card-org">International Conference on Intelligent Data Analysis and Applications</div>
+        <div style="margin-top:6px;"><span class="tag tag-gold">International Conference</span></div>
+      </div>
+      <div class="card">
+        <div class="card-header"><div class="card-title">Closing Lead Volunteer — <a href="https://icpc.global/" target="_blank" style="color:var(--accent);">ICPC Dhaka Regional Contest 2024</a></div><div class="card-meta">2024</div></div>
+        <div class="card-org"><a href="https://daffodilvarsity.edu.bd/" target="_blank" style="color:var(--accent);">Daffodil International University</a></div>
+        <div class="card-body">Oversaw the closing ceremony, coordinated teams and organizers.</div>
+      </div>
+      <div class="card">
+        <div class="card-header"><div class="card-title">Volunteer — BIM 2023</div><div class="card-meta">2023</div></div>
+        <div class="card-org">International Conference on Big Data, IoT and Machine Learning (BIM 2023)</div>
+      </div>
+
+      <!-- Leadership Roles -->
+      <div style="margin-top:36px;margin-bottom:16px;"><div class="section-title">Leadership &amp; Contest Roles</div></div>
+      <div class="card">
+        <div class="card-header"><div class="card-title">Organizer &amp; Judge — Prompt Battle Contest 2024 (First Ever at <a href="https://daffodilvarsity.edu.bd/" target="_blank" style="color:var(--accent);">DIU</a>)</div><div class="card-meta">Fall 2024</div></div>
+        <div class="card-org"><a href="https://www.facebook.com/diucpc" target="_blank" style="color:var(--accent);">DIU Computer &amp; Programming Club (DIU-CPC)</a></div>
+        <div class="card-body">Designed problem statements, evaluated innovative prompts, and oversaw the first-ever Prompt Battle Contest at DIU.</div>
+      </div>
+      <div class="card">
+        <div class="card-header"><div class="card-title">Problem Setter — Datathon Contest Fall 2024</div><div class="card-meta">2024</div></div>
+        <div class="card-org">DIU-CPC · Platform: <a href="https://www.kaggle.com" target="_blank" style="color:var(--accent);">Kaggle</a></div>
+        <div class="card-body">Designed ML challenge problems for the Kaggle-hosted Datathon.</div>
+      </div>
+      <div class="card">
+        <div class="card-header"><div class="card-title">Judge — Idea Poster Presentation, DIU Data Science Summit 2024</div><div class="card-meta">2024</div></div>
+        <div class="card-org"><a href="https://daffodilvarsity.edu.bd/" target="_blank" style="color:var(--accent);">Daffodil International University</a></div>
+        <div class="card-body">Evaluated innovative AI and automation ideas from students at the Data Science Summit.</div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function viewCert(title, issuer, year, icon, desc) {
+      document.getElementById('cert-modal-title').textContent = title;
+      document.getElementById('cert-modal-body').innerHTML = `
+        <div style="font-size:4rem;margin-bottom:16px;">${icon}</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:6px;">${title}</div>
+        <div style="font-family:'DM Sans',sans-serif;font-size:0.85rem;color:var(--accent);font-weight:600;margin-bottom:4px;">${issuer}</div>
+        <div style="font-family:'DM Sans',sans-serif;font-size:0.78rem;color:var(--text-muted);margin-bottom:16px;">${year}</div>
+        <div style="font-size:0.9rem;color:var(--text);line-height:1.7;">${desc}</div>
+      `;
+      openModal('cert-modal');
+    }
+    function openModal(id) { document.getElementById(id).classList.add('open'); document.body.style.overflow='hidden'; }
+    function closeModal(id) { document.getElementById(id).classList.remove('open'); document.body.style.overflow=''; }
+    document.querySelectorAll('.modal-overlay').forEach(o => o.addEventListener('click', function(e){ if(e.target===this) closeModal(this.id); }));
+    document.addEventListener('keydown', e => { if(e.key==='Escape') document.querySelectorAll('.modal-overlay.open').forEach(m=>closeModal(m.id)); });
+  </script>
+</body>
+</html>

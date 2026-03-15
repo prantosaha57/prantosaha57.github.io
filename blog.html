@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Pranto Saha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .filter-bar {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px;
+    }
+    .filter-btn {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem; font-weight: 600;
+      padding: 6px 16px; border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--card-bg); color: var(--text-muted);
+      cursor: pointer; transition: all 0.18s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--navy); color: #fff; border-color: var(--navy);
+    }
+    .blog-card { display: none; }
+    .blog-card.visible { display: flex; flex-direction: column; }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-profile">
+      <div class="sidebar-avatar"><img src="Profile_Photo.jpg" alt="Pranto Saha"></div>
+      <div>
+        <div class="sidebar-name">Pranto Saha</div>
+        <div class="sidebar-title">Lecturer ·Researcher</div>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="index.html" class="active"><span class="nav-icon"></span> Home</a>
+      <a href="research.html"><span class="nav-icon"></span> Research</a>
+      <a href="teaching.html"><span class="nav-icon"></span> Teaching</a>
+      <a href="achievements.html"><span class="nav-icon"></span> Achievements</a>
+      <a href="blog.html"><span class="nav-icon"></span> Blog</a>
+      <a href="recommendations.html"><span class="nav-icon"></span> Recommendations</a>
+      <a href="cv.html"><span class="nav-icon"></span> CV</a>
+      <a href="contact.html"><span class="nav-icon"></span> Contact</a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-social">
+        <a href="mailto:saha15-4157@diu.edu.bd">Email</a>
+        <a href="https://github.com/prantosaha" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/prantosaha" target="_blank">LinkedIn</a>
+      </div>
+      <p>© 2025 Pranto Saha</p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="page-hero">
+      <div class="page-hero-label">Blog & Writing</div>
+      <h1>Blog</h1>
+      <p>Articles, research summaries, and thoughts — shared from academic journals, LinkedIn, and beyond.</p>
+    </div>
+
+    <div class="content">
+
+      <div style="margin-bottom:16px;">
+        <div class="section-title">All Writings</div>
+        <div class="section-subtitle">Filter by source or topic</div>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterPosts('all', this)">All</button>
+        <button class="filter-btn" onclick="filterPosts('linkedin', this)">LinkedIn</button>
+        <button class="filter-btn" onclick="filterPosts('journal', this)">Journal / Academic</button>
+        <button class="filter-btn" onclick="filterPosts('medium', this)">Medium / Personal</button>
+        <button class="filter-btn" onclick="filterPosts('facebook', this)">Facebook</button>
+      </div>
+
+      <!-- Blog Cards Grid -->
+      <div class="blog-grid" id="blog-grid">
+
+        <!-- Sample Post 1 — LinkedIn -->
+        <div class="blog-card visible" data-source="linkedin">
+          <div class="blog-card-body">
+            <div class="blog-card-source linkedin">🔗 LinkedIn</div>
+            <div class="blog-card-title">How I Got My First IEEE Paper Published as an Undergrad</div>
+            <div class="blog-card-excerpt">Getting a paper published at IEEE ECCE 2025 as an undergraduate student was a journey full of revisions, rejections, and resilience. Here's what I learned about the research process...</div>
+            <span class="tag">Research Tips</span><span class="tag">IEEE</span>
+          </div>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">📅 Add your date here</span>
+            <a href="https://linkedin.com/in/prantosaha" target="_blank" class="blog-read-link">Read on LinkedIn →</a>
+          </div>
+        </div>
+
+        <!-- Sample Post 2 — Academic -->
+        <div class="blog-card visible" data-source="journal">
+          <div class="blog-card-body">
+            <div class="blog-card-source journal">📖 Academic</div>
+            <div class="blog-card-title">Self-Supervised Learning for Medical Imaging: A Beginner's Guide</div>
+            <div class="blog-card-excerpt">Self-supervised learning is transforming how we approach medical image analysis. Unlike supervised methods, SSL doesn't require large labeled datasets — making it ideal for clinical environments where annotations are scarce...</div>
+            <span class="tag">Machine Learning</span><span class="tag">Medical AI</span>
+          </div>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">📅 Add your date here</span>
+            <a href="#" class="blog-read-link">Read More →</a>
+          </div>
+        </div>
+
+        <!-- Sample Post 3 — Medium -->
+        <div class="blog-card visible" data-source="medium">
+          <div class="blog-card-body">
+            <div class="blog-card-source medium">✍️ Personal</div>
+            <div class="blog-card-title">Why I Teach Programming in Bengali — And Why It Matters</div>
+            <div class="blog-card-excerpt">When I started my YouTube channel, I made a deliberate choice: I would teach Python and algorithms in Bengali. Here's why that decision changed the way I think about education and access...</div>
+            <span class="tag">Education</span><span class="tag">Bengali</span>
+          </div>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">📅 Add your date here</span>
+            <a href="https://youtube.com" target="_blank" class="blog-read-link">Watch on YouTube →</a>
+          </div>
+        </div>
+
+        <!-- Sample Post 4 — LinkedIn -->
+        <div class="blog-card visible" data-source="linkedin">
+          <div class="blog-card-body">
+            <div class="blog-card-source linkedin">🔗 LinkedIn</div>
+            <div class="blog-card-title">PhD Applications: What I've Learned So Far</div>
+            <div class="blog-card-excerpt">Preparing for a PhD is different from anything I've done before. From identifying supervisors to crafting a research statement, here are the key lessons from my ongoing PhD application journey...</div>
+            <span class="tag">PhD</span><span class="tag">Career</span>
+          </div>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">📅 Add your date here</span>
+            <a href="https://linkedin.com/in/prantosaha" target="_blank" class="blog-read-link">Read on LinkedIn →</a>
+          </div>
+        </div>
+
+        <!-- Sample Post 5 — Facebook -->
+        <div class="blog-card visible" data-source="facebook">
+          <div class="blog-card-body">
+            <div class="blog-card-source facebook">📘 Facebook</div>
+            <div class="blog-card-title">ICPC Dhaka Regional 2024 — My Experience as Closing Lead Volunteer</div>
+            <div class="blog-card-excerpt">Being the Closing Lead Volunteer at ICPC Dhaka Regional 2024 was one of the most intense and rewarding experiences of my academic life. Managing the ceremony, coordinating with 200+ participants...</div>
+            <span class="tag">ICPC</span><span class="tag">Events</span>
+          </div>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">📅 Add your date here</span>
+            <a href="https://www.facebook.com" target="_blank" class="blog-read-link">Read on Facebook →</a>
+          </div>
+        </div>
+
+        <!-- Sample Post 6 — Academic -->
+        <div class="blog-card visible" data-source="journal">
+          <div class="blog-card-body">
+            <div class="blog-card-source journal">📖 Academic</div>
+            <div class="blog-card-title">Bengali NLP in 2025: Challenges and Opportunities</div>
+            <div class="blog-card-excerpt">Despite being spoken by over 230 million people, Bengali remains a low-resource language in NLP research. Our recent work on depression detection in Bengali social media texts reveals both the challenges and the immense potential of this space...</div>
+            <span class="tag">Bengali NLP</span><span class="tag">Mental Health AI</span>
+          </div>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">📅 Add your date here</span>
+            <a href="research.html" class="blog-read-link">See Publication →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Add New Post Note -->
+      <div style="margin-top:32px;padding:22px 26px;background:#f7f9fc;border:1px dashed var(--border);border-radius:10px;text-align:center;">
+        <div style="font-family:'DM Sans',sans-serif;font-size:0.83rem;color:var(--text-muted);margin-bottom:6px;font-weight:600;">Want to add a new post?</div>
+        <div style="font-size:0.82rem;color:var(--text-muted);">Open <code style="background:#e8ecf2;padding:2px 6px;border-radius:3px;font-size:0.8rem;">blog.html</code> in VS Code and copy one of the <code style="background:#e8ecf2;padding:2px 6px;border-radius:3px;font-size:0.8rem;">&lt;div class="blog-card"&gt;</code> blocks. Update the title, excerpt, link and set <code style="background:#e8ecf2;padding:2px 6px;border-radius:3px;font-size:0.8rem;">data-source</code> to: linkedin, journal, medium, or facebook.</div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    function filterPosts(source, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.blog-card').forEach(card => {
+        if (source === 'all' || card.dataset.source === source) {
+          card.classList.add('visible');
+        } else {
+          card.classList.remove('visible');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
